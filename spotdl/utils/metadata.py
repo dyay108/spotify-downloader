@@ -216,8 +216,8 @@ def embed_metadata(
     if song.copyright_text:
         audio_file[tag_preset["copyright"]] = song.copyright_text
 
-    if song.download_url and encoding != "mp3":
-        audio_file[tag_preset["comment"]] = song.download_url
+    if song.url and encoding != "mp3":
+        audio_file[tag_preset["comment"]] = song.url
 
     # Embed some metadata in format specific ways
     if encoding in ["flac", "ogg", "opus"]:
